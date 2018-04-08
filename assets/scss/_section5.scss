@@ -1,0 +1,38 @@
+.section_5 {
+
+  .notebook {
+    display: none;
+  }
+  @include lg-block {
+    padding-bottom: 30px;
+
+    iframe {
+      width: 70%;
+      height: 70%;
+      margin: auto;
+    }
+    .notebook {
+      display: flex;
+      @include col;
+      @include size(6);
+      background: url("/assets/img/macbook.png") no-repeat center;
+      background-size: 100%;
+      position: absolute;
+      top: -10%;
+      right: 0;
+      width: 62%;
+      height: 120%;
+    }
+    .flex {
+      display: flex;
+      position: relative;
+    }
+    .text {
+      background-color: #fff;
+      border: 1px solid #dce2e7;
+      padding: 0 50px 0 10px;
+      @include col;
+      @include size(6);
+    }
+  }
+}

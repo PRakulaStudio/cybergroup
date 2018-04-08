@@ -1,0 +1,242 @@
+@import "mixins";
+
+header {
+  .menu {
+    margin-right: 0;
+    margin-left: 15px;
+    position: relative;
+    .menu_list_wrapper {
+      border-radius: 0 25px 0 0;
+      display: none;
+      h4 {
+        color: #3e4043;
+      }
+      .close {
+        $wh: 38px;
+        position: absolute;
+        right: 0;
+        width: $wh;
+        top: 0;
+        height: $wh;
+        background: #0a68b0 url("/assets/icons/close.svg") center no-repeat;
+        background-size: 20px;
+        border-radius: $wh;
+        cursor: pointer;
+      }
+      top: 0;
+      right: 0;
+      position: absolute;
+      z-index: 2;
+      background: #f0f0f0;
+      width: 300px;
+      border: 1px solid #dce2e7;
+      text-align: left;
+      h4 {
+        padding: 0 10px;
+        margin: 10px 0;
+      }
+      .menu_list {
+        ul {
+          padding: 0;
+          background: #fff;
+          list-style: none;
+          margin: 0;
+          max-height: 195px;
+          overflow-y: scroll;
+          a {
+            padding: 10px 0 10px 10px;
+            color: #5e626a;
+            text-decoration: none;
+            display: block;
+          }
+          a:hover {
+            background: #1a89de;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .cities {
+    border: 1px solid #dce2e7;
+    display: flex;
+    cursor: pointer;
+    padding-left: 20px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 100%;
+      left: 0;
+      background: url("/assets/icons/placeholder.png") no-repeat center;
+      top: -1px;
+    }
+    .list {
+      z-index: 4;
+      display: none;
+      background-color: #f1f2f2;
+      border: 1px solid #dce2e7;
+      position: absolute;
+      top: 100%;
+      width: calc(100% + 2px);
+      left: -1px;
+      text-align: left;
+      .search_city {
+        padding: 10px;
+        border-bottom: 1px solid #dce2e7;
+        input {
+          background: #fff;
+          border: 1px solid #dce2e7;
+          padding: 10px;
+        }
+      }
+      ul {
+        padding: 0;
+        background: #fff;
+        list-style: none;
+        margin: 0;
+        max-height: 195px;
+        overflow-y: scroll;
+        a {
+          display: block;
+          padding: 10px 0 10px 30px;
+          &:hover {
+            background: #1a89de;
+            color: #fff;
+          }
+        }
+        a {
+          color: #5e626a;
+          text-decoration: none;
+        }
+      }
+    }
+    span {
+      padding: 5px;
+      display: block;
+    }
+    span:nth-child(1) {
+      width: 160px;
+      text-align: left;
+    }
+    span:nth-child(2) {
+      display: flex;
+      padding: 5px 10px;
+      border-left: 1px solid #dce2e7;
+      img {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.mobile_header_top {
+  .menu {
+    margin-left: 0;
+  }
+  .menu_list_wrapper {
+    right: auto;
+    left: 0;
+  }
+  @include lg-block {
+    display: none;
+  }
+  display: flex;
+  background: #2d2e2f;
+  padding: 10px;
+  justify-content: space-between;
+  color: #efefef;
+  .menu_btn {
+    font-weight: 900;
+    display: flex;
+    span {
+      margin: auto 5px;
+      text-transform: uppercase;
+    }
+  }
+  .cities {
+    font-weight: 300;
+  }
+}
+
+.desktop_header_top {
+  text-align: center;
+
+  .cities, .menu_btn {
+    display: none;
+  }
+  @include lg-block {
+    .cities {
+      display: flex;
+    }
+
+    .menu_btn {
+      display: block;
+      margin-right: 0;
+      margin-left: 0;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 40px;
+      height: 48px;
+      width: 48px;
+      cursor: pointer;
+    }
+    .time_work {
+      margin-left: 15px;
+      margin-right: 0;
+    }
+    display: flex;
+    > * {
+      margin: auto;
+    }
+    .phone {
+      display: flex;
+      margin-right: 0;
+      a {
+        @include fontSize(24);
+        margin: auto;
+        &:before {
+          top: -3px;
+        }
+      }
+    }
+    .logo {
+      margin-left: 0;
+    }
+  }
+
+  .logo {
+    padding: 10px 0;
+    img {
+      object-fit: contain;
+      width: 100%;
+      max-width: 302px;
+    }
+  }
+  .phone {
+    margin: 10px 0;
+    a {
+      text-decoration: none;
+      color: #3e4043;
+      font-weight: 900;
+      position: relative;
+      @include fontSize(30);
+      margin-left: 25px;
+
+      &:before {
+        content: '';
+        height: 34px;
+        display: block;
+        width: 30px;
+        position: absolute;
+        background: url("../icons/big-telephone.svg") no-repeat center;
+        background-size: contain;
+        left: -34px;
+      }
+    }
+  }
+  .time_work {
+    font-weight: 300;
+  }
+}

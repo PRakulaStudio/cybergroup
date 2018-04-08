@@ -1,0 +1,39 @@
+@import "smart-grid";
+
+footer {
+  text-align: center;
+  padding-bottom: 10px;
+  img {
+    margin: auto;
+    width: 100%;
+    max-width: 302px;
+  }
+  a {
+    text-decoration: none;
+    color: #5a6062;
+  }
+  .dev-in {
+    font-weight: 100;
+    p {
+      margin: 0;
+    }
+  }
+  .pr-akula {
+    font-weight: 700;
+    max-width: 302px;
+    @include fontSize(26);
+    .pr-akula-pr {
+      color: #ff0000;
+    }
+  }
+  @include lg-block {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      > * {
+        margin: auto;
+      }
+    }
+  }
+}

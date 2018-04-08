@@ -1,0 +1,56 @@
+.section_4 {
+  @include lg-block {
+    padding-bottom: 20px;
+  }
+  .container {
+    position: relative;
+  }
+  .swiper-container {
+    border: none;
+  }
+  .swiper-slide {
+    padding: 0;
+    outline: none;
+    position: relative;
+    .price {
+      position: absolute;
+      background: #0a68b0;
+      margin-top: 20px;
+      padding: 10px;
+      color: #fff;
+      font-weight: 700;
+    }
+    img {
+      width: 100%;
+      max-height: 390px;
+      object-fit: cover;
+    }
+    .section_4_link {
+      margin-top: 5px;
+      a {
+        padding: 10px;
+        background: #f00;
+        transition: all 250ms ease;
+      }
+    }
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+    }
+    &:hover {
+      .section_4_link a {
+        background: #0a68b0;
+      }
+    }
+  }
+  .swiper-buttons {
+    @include lg-block {
+      position: absolute;
+      right: 15px;
+      top: 0;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "smart-grid";
+
+.section_3 {
+  .swiper-container {
+    @include lg-block {
+      display: none;
+    }
+  }
+  .list {
+    display: none;
+    @include lg-block {
+      @include row-flex;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+  }
+  .item {
+    outline: 1px solid #dce2e7;
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    position: relative;
+    img{
+      margin: 20px 20px 0 0 ;
+    }
+
+    .number{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-weight: 900;
+      color: #e2e2e2;
+    }
+    @include col;
+    @include size(6);
+    margin: 0;
+    width: 50%;
+
+    &:hover {
+      background: #0a68b0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      color: #fff;
+      img.simple {
+        display: none;
+      }
+      img.hover {
+        display: block;
+      }
+    }
+
+  }
+  .swiper-buttons {
+    @include lg-block {
+      display: none;
+    }
+  }
+  @include lg-block {
+    padding-bottom: 20px;
+  }
+}

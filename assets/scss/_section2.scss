@@ -1,0 +1,12 @@
+@import "smart-grid";
+
+.section_2 {
+  .swiper-buttons {
+    @include lg-block {
+      display: none;
+    }
+  }
+  @include lg-block {
+    padding-bottom: 20px;
+  }
+}

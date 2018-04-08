@@ -1,0 +1,57 @@
+.section_7 {
+  background: url("/assets/img/section_7_back.jpg") no-repeat center;
+  background-size: cover;
+  padding: 30px 10px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    border: 20px solid #f00;
+    border-bottom-color: transparent;
+    top: 0;
+  }
+  h2 {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  h3 {
+    font-weight: 500;
+    margin-top: 0;
+  }
+  a {
+    color: #fff;
+  }
+  button {
+    margin-top: 10px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  input::placeholder {
+    font-weight: 300;
+    color: #fff;
+  }
+  .btn {
+    max-width: 150px;
+  }
+  @include lg-block {
+    .inputs {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+      p{
+        margin: 0 5px;
+      }
+    }
+  }
+
+}
