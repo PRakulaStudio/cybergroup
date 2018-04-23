@@ -1,0 +1,37 @@
+.breadcrumbs {
+  background: url("/assets/img/section_1_back.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  height: 38px;
+  .container {
+    display: flex;
+    overflow-x: scroll;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    position: relative;
+    margin-right: 16px;
+    white-space: nowrap;
+  }
+  a.active, a:hover {
+    text-decoration: underline;
+  }
+  a:after {
+    content: '';
+    background: url("/assets/icons/next-invert.svg") no-repeat center;
+    background-size: contain;
+    width: 20px;
+    display: block;
+    height: 1rem;
+    top: 0.7rem;
+    right: -20px;
+    position: absolute;
+  }
+  a:last-child:after{
+    content: none;
+  }
+
+}

@@ -1,0 +1,56 @@
+.contacts {
+  margin-bottom: 30px;
+  .wrapper {
+    border: 1px solid #dce2e7;
+  }
+  .cities__item {
+    background: #f2f4f6;
+    padding: 1px 15px;
+    border: 1px solid #dce2e7;
+    border-right: none;
+    cursor: pointer;
+    .info {
+      display: none;
+    }
+  }
+  .info {
+    display: block;
+  }
+  .cities__item--active {
+    background: #2072b1;
+    color: #fff;
+    cursor: default;
+    border: none;
+    a {
+      color: #fff;
+    }
+    a[href^="tel:"] {
+      text-decoration: none;
+    }
+    .info {
+      display: block;
+    }
+  }
+  .contacts__map {
+    height: 40vh;
+    .map {
+      height: 100%;
+      display: none;
+    }
+    .map--active {
+      display: block;
+    }
+  }
+
+  @include lg-block {
+    .wrapper {
+      display: flex;
+    }
+    .contacts__cities {
+      border-right: 2px solid #2072b1;
+    }
+    .contacts__map {
+      flex-grow: 3;
+    }
+  }
+}

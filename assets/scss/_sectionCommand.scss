@@ -1,0 +1,27 @@
+.command {
+  .men {
+    .man {
+      text-align: center;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  @include lg-block {
+    .men {
+      @include row-flex;
+      .man {
+        @include col;
+        @include size(4);
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.monitoring {
+  padding-bottom: 30px;
+  .info {
+    margin-bottom: 20px;
+    @include row-flex;
+    .text, .warning {
+      @include size(6);
+      @include col;
+    }
+    .btn--no_width {
+      width: fit-content;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin: 30px 0;
+      display: block;
+    }
+  }
+
+  .warning {
+    margin-top: 1rem;
+    background: #f2f4f6;
+    padding: 1px 30px;
+    height: fit-content;
+    h4 {
+      text-transform: uppercase;
+    }
+    p {
+      margin-left: 20px;
+      position: relative;
+    }
+    p:before {
+      position: absolute;
+      content: '';
+      margin-left: -30px;
+      width: 20px;
+      height: 100%;
+      background: url("/assets/icons/check-mark.svg") no-repeat left top;
+      background-size: contain;
+    }
+  }
+  .photos {
+    @include row-flex;
+    .photo {
+      @include col;
+      @include size(4);
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .demo {
+    background: #f2f4f6;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}

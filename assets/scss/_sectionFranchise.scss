@@ -1,0 +1,32 @@
+.franchise {
+  padding-bottom: 30px;
+  .info {
+    @include row-flex;
+    .text, .warning {
+      @include size(6);
+      @include col;
+    }
+  }
+
+  .warning {
+    margin-top: 1rem;
+    h4 {
+      text-transform: uppercase;
+    }
+    background: #f2f4f6;
+    padding: 1px 30px;
+    height: fit-content;
+  }
+  .photos {
+    @include row-flex;
+    .photo {
+      @include col;
+      @include size(4);
+      img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

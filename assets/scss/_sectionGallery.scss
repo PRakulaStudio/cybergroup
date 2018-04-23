@@ -1,0 +1,20 @@
+.gallery {
+  .images {
+    margin-bottom: 30px;
+    @include row-flex;
+  }
+  .image {
+    padding: 10px 0;
+    height: 300px;
+    @include col;
+    @include size(6);
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .image:nth-child(5n), .image:nth-child(5n-1), .image:nth-child(5n-2) {
+    @include size(4)
+  }
+}

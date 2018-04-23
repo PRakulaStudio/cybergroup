@@ -98,11 +98,12 @@ body {
   }
 }
 
-h2 {
+h1, h2 {
   font-weight: 300;
 }
 
 @import "header";
+@import "breadcrumbs";
 @import "section1";
 @import "section2";
 @import "section3";
@@ -111,12 +112,55 @@ h2 {
 @import "section6";
 @import "section7";
 @import "section8";
+@import "sectionContacts";
+@import "sectionCompany";
+@import "sectionCommand";
+@import "sectionCertificates";
+@import "sectionFranchise";
+@import "sectionTrusted";
+@import "sectionMonitoring";
+@import "sectionWorks";
+@import "sectionGallery";
+@import "sectionFilter";
 @import "footer";
 
 .section--blue {
   padding: 10px 0;
   background: #f3f6f9;
 }
-.d-block{
+
+.d-block {
   display: block !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+a.lb {
+  position: relative;
+  display: block;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+a.lb:after {
+  background: rgba(0, 0, 255, 0.5) url("/assets/icons/zoom.svg") no-repeat center;
+  background-size: 50px;
+  content: '';
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a.lb:hover:after {
+  display: block;
 }
