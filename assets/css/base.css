@@ -1170,6 +1170,13 @@ header .cities span:nth-child(2) img {
           flex-direction: column;
 }
 
+.product .product-_info-top .info > .d-flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .product .buttons--grey {
   display: -webkit-box;
   display: -ms-flexbox;

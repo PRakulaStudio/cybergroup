@@ -19,6 +19,7 @@
     }
     .info {
       > .d-flex {
+        flex-direction: column;
         @include sm-block() {
           flex-direction: row;
           .flex-center{
