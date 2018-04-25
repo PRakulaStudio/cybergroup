@@ -55,6 +55,32 @@ body {
   }
 }
 
+.btn--blue {
+  background-color: #0a68b0;
+  color: $color-white;
+  &:hover {
+    background-color: darken(#0a68b0, 10%);
+  }
+}
+
+.btn--blue-outline {
+  background: #fff;
+  border: 2px solid #0a68b0;
+  color: #0a68b0;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: all 250ms ease;
+
+  &:hover, &.active {
+    background-color: #0a68b0;
+    color: $color-white;
+  }
+}
+
 .swiper-container {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   width: 100%;
@@ -122,6 +148,7 @@ h1, h2 {
 @import "sectionWorks";
 @import "sectionGallery";
 @import "sectionFilter";
+@import "sectionProduct";
 @import "footer";
 
 .section--blue {

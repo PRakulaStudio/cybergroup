@@ -64,6 +64,8 @@
     }
   }
   .swiper-buttons {
-    display: none;
+    @include lg-block {
+      display: none;
+    }
   }
 }

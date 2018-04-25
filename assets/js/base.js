@@ -31,9 +31,12 @@ window.onload = function () {
       })
     })
   })
-  document.querySelectorAll('.section_1_btn .btn').forEach(btn => {
+  document.querySelectorAll('.section_1_btn .btn, .product .btn-to-bid').forEach(btn => {
     btn.addEventListener('click', event => {
-      animateScrollTo(document.querySelector('.section_7').getBoundingClientRect().top);
+      $('html, body').animate({
+        scrollTop: $(".section_7").offset().top
+      }, 1000);
+      //animateScrollTo(document.querySelector('.section_7').getBoundingClientRect().top + btn.getBoundingClientRect().top);
     })
   })
   document.querySelectorAll('.contacts__cities .cities__item').forEach(city => {
@@ -45,5 +48,21 @@ window.onload = function () {
       document.querySelector('#' + city.attributes.getNamedItem('data-href').value).classList.add('map--active')
     })
   })
+
+  document.querySelectorAll('.modificators button').forEach(button => {
+    button.addEventListener('click', event => {
+      button.classList.toggle('active')
+    })
+  })
+  document.querySelectorAll('.characteristics .buttons .btn').forEach(btn => {
+    btn.addEventListener('click', event => {
+      document.querySelectorAll('.characteristics .active').forEach(el => {
+        el.classList.remove('active');
+      })
+      btn.classList.add('active');
+      let c = btn.attributes.getNamedItem('data-href').value;
+      document.querySelector('.characteristics .' + c).classList.add('active');
+    })
+  });
 }
 

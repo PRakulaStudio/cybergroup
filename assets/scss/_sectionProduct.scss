@@ -1,0 +1,196 @@
+.product {
+  .product-_info-top {
+    display: flex;
+    flex-direction: column;
+    @include md-block {
+      flex-direction: row;
+      .swiper {
+        width: 25%;
+        .swiper-slide {
+          padding: 0;
+          margin: 0;
+        }
+
+      }
+      .info {
+        width: 75%;
+        padding-left: 20px;
+      }
+    }
+    .info {
+      > .d-flex {
+        @include sm-block() {
+          flex-direction: row;
+          .flex-center{
+            width: 80%;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .buttons--grey {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include sm-block {
+      order: 10;
+      width: 20%;
+      .btn--grey{
+        width: 100%;
+      }
+    }
+    span {
+      margin: auto;
+    }
+  }
+  .btn--grey {
+    display: flex;
+    border: none;
+    padding: 10px;
+    background: #dce2e7;
+    width: calc(50% - 2.5px);
+    margin-bottom: 5px;
+  }
+  .btn--full {
+    width: 100%;
+  }
+  .modificators {
+    background-color: #f0f3f5;
+    padding: 1px 10px;
+    @include sm-block {
+      display: flex;
+      flex-wrap: wrap;
+      h4 {
+        width: 100%;
+      }
+      p {
+        width: fit-content;
+        margin-top: 0;
+        margin-right: 10px;
+      }
+    }
+    button {
+      background: #fff;
+      border: 1px solid #dce2e7;
+      width: 100%;
+      padding: 10px;
+      position: relative;
+      &:before {
+        display: inline-block;
+        content: '';
+        background: url("/assets/icons/check-mark-grey.svg") no-repeat center;
+        background-size: contain;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 5px;
+        top: 2px;
+        position: relative;
+      }
+    }
+    button.active {
+      background: #0a68b0;
+      border: 1px solid #0a68b0;
+      color: #fff;
+      &:before {
+        background-image: url("/assets/icons/check-mark-white.svg");
+      }
+    }
+  }
+  .price-block {
+    background-color: #f0f3f5;
+    text-align: center;
+    padding: 1px 0;
+    h4 {
+      margin-top: 0;
+    }
+    @include sm-block {
+      background-color: transparent;
+      text-align: left;
+      h4 {
+        margin-top: 1rem;
+      }
+    }
+    .price {
+      color: #0a68b0;
+      font-weight: 900;
+      font-size: 24px;
+    }
+  }
+  .btn--blue-outline {
+    width: fit-content;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+  }
+  .advantages {
+    border: 1px solid #f0f3f5;
+    padding: 10px;
+    margin-bottom: 10px;
+    @include sm-block {
+      display: flex;
+      justify-content: space-between;
+    }
+    .item {
+      display: flex;
+      margin: 10px 0;
+      > * {
+        margin: auto 0;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+  }
+  .characteristics {
+    .buttons {
+      .btn {
+        width: 100%;
+        display: inline-block;
+        @include sm-block {
+          width: fit-content;
+        }
+      }
+    }
+    .texts {
+      > div {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  .links {
+    .btn {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    @include md-block {
+      display: flex;
+      justify-content: flex-end;
+      .btn {
+        display: inline-block;
+        width: fit-content;
+        margin-right: 10px;
+      }
+      button.btn {
+        order: 10;
+      }
+    }
+  }
+  .modificators + .d-flex {
+    flex-direction: column;
+    justify-content: space-between;
+    @include sm-block {
+      flex-direction: row;
+    }
+  }
+}

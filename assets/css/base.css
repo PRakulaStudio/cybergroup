@@ -121,6 +121,35 @@ body {
   color: #fff;
 }
 
+.btn--blue {
+  background-color: #0a68b0;
+  color: #fff;
+}
+
+.btn--blue:hover {
+  background-color: #074b80;
+}
+
+.btn--blue-outline {
+  background: #fff;
+  border: 2px solid #0a68b0;
+  color: #0a68b0;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 10px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.btn--blue-outline:hover,
+.btn--blue-outline.active {
+  background-color: #0a68b0;
+  color: #fff;
+}
+
 .swiper-container {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   width: 100%;
@@ -553,13 +582,18 @@ header .cities span:nth-child(2) img {
   margin-top: 20px;
 }
 
-.section--full-width .item {
-  width: 25%;
+.section--full-width .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -7.5px;
+  margin-right: -7.5px;
 }
 
-.section--full-width .item .number {
-  top: 10px;
-  right: 10px;
+.section--full-width .item {
+  width: 100%;
 }
 
 .section_4 .container {
@@ -659,10 +693,6 @@ header .cities span:nth-child(2) img {
   display: none;
 }
 
-.section_6 .swiper-buttons {
-  display: none;
-}
-
 .section_7 {
   background: url("/assets/img/section_7_back.jpg") no-repeat center;
   background-size: cover;
@@ -678,6 +708,7 @@ header .cities span:nth-child(2) img {
   border: 20px solid #f00;
   border-bottom-color: transparent;
   top: 0;
+  left: calc(50% - 20px);
 }
 
 .section_7 h2 {
@@ -1091,6 +1122,10 @@ header .cities span:nth-child(2) img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .filter .btn--filter {
@@ -1123,6 +1158,164 @@ header .cities span:nth-child(2) img {
   margin-right: 7.5px;
   width: calc(25% - 15px);
   margin-bottom: 20px;
+}
+
+.product .product-_info-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product .buttons--grey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product .buttons--grey span {
+  margin: auto;
+}
+
+.product .btn--grey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  padding: 10px;
+  background: #dce2e7;
+  width: calc(50% - 2.5px);
+  margin-bottom: 5px;
+}
+
+.product .btn--full {
+  width: 100%;
+}
+
+.product .modificators {
+  background-color: #f0f3f5;
+  padding: 1px 10px;
+}
+
+.product .modificators button {
+  background: #fff;
+  border: 1px solid #dce2e7;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+.product .modificators button:before {
+  display: inline-block;
+  content: '';
+  background: url("/assets/icons/check-mark-grey.svg") no-repeat center;
+  background-size: contain;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 5px;
+  top: 2px;
+  position: relative;
+}
+
+.product .modificators button.active {
+  background: #0a68b0;
+  border: 1px solid #0a68b0;
+  color: #fff;
+}
+
+.product .modificators button.active:before {
+  background-image: url("/assets/icons/check-mark-white.svg");
+}
+
+.product .price-block {
+  background-color: #f0f3f5;
+  text-align: center;
+  padding: 1px 0;
+}
+
+.product .price-block h4 {
+  margin-top: 0;
+}
+
+.product .price-block .price {
+  color: #0a68b0;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.product .btn--blue-outline {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+}
+
+.product .advantages {
+  border: 1px solid #f0f3f5;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.product .advantages .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.product .advantages .item > * {
+  margin: auto 0;
+}
+
+.product .advantages .item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.product .characteristics .buttons .btn {
+  width: 100%;
+  display: inline-block;
+}
+
+.product .characteristics .texts > div {
+  display: none;
+}
+
+.product .characteristics .texts > div.active {
+  display: block;
+}
+
+.product .links .btn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.product .modificators + .d-flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer {
@@ -1204,6 +1397,148 @@ a.lb:after {
 
 a.lb:hover:after {
   display: block;
+}
+
+@media screen and (min-width: 780px) {
+  .section--full-width .item {
+    width: 50%;
+  }
+
+  .section--full-width .item .number {
+    top: 10px;
+    right: 10px;
+  }
+
+  .filter .list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .product .product-_info-top .info > .d-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .product .product-_info-top .info > .d-flex .flex-center {
+    width: 80%;
+    padding-right: 10px;
+  }
+
+  .product .buttons--grey {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+    width: 20%;
+  }
+
+  .product .buttons--grey .btn--grey {
+    width: 100%;
+  }
+
+  .product .modificators {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .product .modificators h4 {
+    width: 100%;
+  }
+
+  .product .modificators p {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 0;
+    margin-right: 10px;
+  }
+
+  .product .price-block {
+    background-color: transparent;
+    text-align: left;
+  }
+
+  .product .price-block h4 {
+    margin-top: 1rem;
+  }
+
+  .product .advantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .product .characteristics .buttons .btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .product .modificators + .d-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .section--full-width .item {
+    width: 25%;
+  }
+
+  .product .product-_info-top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .product .product-_info-top .swiper {
+    width: 25%;
+  }
+
+  .product .product-_info-top .swiper .swiper-slide {
+    padding: 0;
+    margin: 0;
+  }
+
+  .product .product-_info-top .info {
+    width: 75%;
+    padding-left: 20px;
+  }
+
+  .product .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .product .links .btn {
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 10px;
+  }
+
+  .product .links button.btn {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -1454,6 +1789,10 @@ a.lb:hover:after {
 
   .section_6 .list .item:nth-child(2n+1) {
     margin-right: 10px;
+  }
+
+  .section_6 .swiper-buttons {
+    display: none;
   }
 
   .section_7 .inputs {
